@@ -1,10 +1,17 @@
-import './App.css';
+import Navbar from './components/navbar'
+import Home from './components/home'
+import About from './components/about'
+import Technologies from './components/technologies'
+import "./assets/sass/App.sass";
 
 function App() {
   return (
-    <div className="App">
-      <p>Hey, soy tu portfolio</p>
-    </div>
+    <main className="App">
+      <Navbar />
+      <Home />
+      <About />
+      <Technologies />
+    </main>
   );
 }
 

@@ -1,0 +1,45 @@
+.home
+    padding-top: 80px    
+    position: relative
+    background-color: $secondary-color 
+    height: calc(100vh - 80px) 
+    display: flex
+    justify-content: space-evenly
+    align-items: center
+    flex-direction: row
+    
+.home:after
+    background-image: url('../../img/coding.png')
+    background-repeat: no-repeat
+    background-position: 50% 0
+    background-size: cover
+    z-index: 1
+    opacity: 0.3
+    content: ' '
+    display: block
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+
+
+.image-cv
+    width: 280px
+    height: 240px
+    position: relative
+    z-index: 2
+    border-radius: 100%
+
+.text-container
+    text-align: center
+    z-index: 2
+
+.text-container p
+    color: $primary-color
+    font-family: $title-font
+    font-size: $title-size
+    
+
+.text-container strong
+    color: $third-color
