@@ -2,17 +2,36 @@
     
     display: flex
     flex-direction: column
+    justify-content: space-around
+    align-content: space-between
+    flex-wrap: nowrap
+    margin-top: 80px
+    height: 100vh
+
+.about__sections
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    align-content: space-between
+    flex-wrap: nowrap
+
+
+.about__description
+    display: flex
+    flex-direction: column
     justify-content: center
     align-content: center
     flex-wrap: wrap
-    margin: 80px
+    width: 50%
+    text-align: center
+
 
 .about__title
     font-family: $title-font
-    font-size: $title-size
-    text-align: center
+    font-size: $title-size    
     font-weight: 800
     padding: 1rem
+    align-self: center
 
 .about__subtitle
     font-family: $title-font
@@ -25,16 +44,16 @@
     font-size: $text-size
    
 
-.about__text--container
-    width: 33%
+.about__text--container    
     padding: 1rem
+    
 
 .button
     margin: 1rem
     background-color: $third-color
     height: 40px
     border-radius: 100px
-    width: 10%
+    width: 20%
     align-self: center
 
 
@@ -44,3 +63,48 @@
 .button--text
     text-decoration: none
     color: $primary-color
+
+.about__languages
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-content: center
+    flex-wrap: wrap
+    width: 50%
+    text-align: center
+
+.languages
+    margin: 20px auto
+    display: grid 
+    width: 600px
+    height: 200px
+    grid-template-columns: 300px 300px
+    grid-row: auto auto
+    grid-column-gap: 20px
+    grid-row-gap: 20px   
+
+.language    
+    list-style: none
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+
+.flag 
+    transform: scale(3)
+    padding: 1rem
+    cursor: pointer
+    filter: gray
+    filter: grayscale(1) 
+
+.flag:hover
+    filter: none
+    transform: scale(3.2)
+
+.language__description
+    
+    font-family: $text-font
+    font-size: $text-size
+        
+

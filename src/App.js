@@ -2,6 +2,7 @@ import Navbar from './components/navbar'
 import Home from './components/home'
 import About from './components/about'
 import Technologies from './components/technologies'
+import Projects from './components/projects'
 import "./assets/sass/App.sass";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Home />
       <About />
       <Technologies />
+      <Projects />
     </main>
   );
 }

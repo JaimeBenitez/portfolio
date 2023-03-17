@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function home(){
+export default function Home(){
     return(
         <section className="home" id="home">             
             <img className="image-cv" src={require('../assets/img/Foto-cv.png')} alt="mi foto" />

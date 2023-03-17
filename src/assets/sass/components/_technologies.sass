@@ -1,10 +1,18 @@
 .technologies    
     display: flex
     flex-direction: column
-    justify-content: center
-    align-content: center
-    flex-wrap: wrap
+    justify-content: space-around
+    align-content: space-between
+    flex-wrap: nowrap
     margin: 80px
+    height: 100vh
+
+.technologies__container
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    align-content: space-between
+    flex-wrap: nowrap
     
     
 .technologies__title    
@@ -12,9 +20,68 @@
     font-size: $title-size
     font-weight: 800
     padding: 1rem
+    align-self: center
+
+.technologies__item
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-content: center
+    flex-wrap: wrap
+    width: 25%
+    text-align: center
 
 .technologies__subtitle
     font-family: $title-font
     font-size: $subtitle-size
     font-weight: 800
     padding: 1rem
+
+.techs
+    margin: 20px auto
+    display: grid 
+    width: 200px
+    height: 300px
+    grid-template-columns: 100px 100px
+    grid-template-rows: 100px 100px 100px
+    grid-row: auto 
+    grid-column-gap: 20px
+    grid-row-gap: 20px 
+
+
+
+.tech   
+    list-style: none
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+.icon
+    transform: scale(3)
+    padding: 1rem
+    cursor: pointer
+    filter: gray
+    filter: grayscale(1) 
+
+.icon:hover
+    filter: none
+    transform: scale(3.2)
+
+.git
+    transform: scale(3.2)    
+
+.git:hover    
+    transform: scale(3.4)
+
+.spring
+    transform: scale(3.2)    
+
+.spring:hover    
+    transform: scale(3.4)
+
+
+.tech__description
+    
+    font-family: $text-font
+    font-size: $text-size

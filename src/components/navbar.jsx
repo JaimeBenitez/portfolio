@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function navbar(){
+export default function Navbar(){
 
     return(
         <header>
@@ -9,8 +9,8 @@ export default function navbar(){
                 <ul className='links'>
                     <li className='nav__li'><a href='#home' className='navlink'>INICIO</a></li>
                     <li className='nav__li'><a href='#about' className='navlink'>SOBRE MI</a></li>
-                    <li className='nav__li'><a href='#' className='navlink'>TECNOLOGÍAS</a></li>
-                    <li className='nav__li'><a href='#' className='navlink'>PROYECTOS</a></li>
+                    <li className='nav__li'><a href='#technologies' className='navlink'>TECNOLOGÍAS</a></li>
+                    <li className='nav__li'><a href='#projects' className='navlink'>PROYECTOS</a></li>
                     <li className='nav__li'><a href='#' className='navlink'>CONTACTO</a></li>
                 </ul>                
             </nav>

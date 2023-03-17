@@ -1,0 +1,77 @@
+.projects    
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-content: space-between
+    flex-wrap: nowrap
+    margin-top: 80px
+    height: 100vh
+
+.projects__title
+    font-family: $title-font
+    font-size: $title-size
+    font-weight: 800
+    padding: 1rem
+    align-self: center
+
+.projects__container
+    max-width: 110rem
+    padding: 1.5rem
+
+.cards
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr))
+    grid-gap: 1.5rem
+
+.card
+    
+    color: $primary-color
+    padding: 1.5rem
+    overflow: hidden
+    border-radius: 0.8rem
+    position: relative
+
+.card-img
+    height: 100%
+    width: 100%
+    display: block
+    border-radius: 0.8rem
+    margin-bottom: 1.5rem
+
+.hover-container
+    position: absolute    
+    height: 60%
+    width: 70%
+    top: 400px       
+    border-radius: 0.8rem
+    transition: all 2s ease
+    opacity: 0.8
+    display: flex 
+    justify-content: center
+    align-items: center
+    flex-direction: column 
+    text-align: center
+    @include neo (1, 1em, .1em)   
+
+
+.show 
+    top: 130px
+    transition: all 2s ease
+
+.card-title
+    font-family: $title-font
+    font-size: $title-size
+
+.card-description
+    font-family: $text-font
+    font-size: $text-size
+
+
+.card-link
+    text-decoration: none
+    color: $primary-color
+    background-color: $third-color
+    width: 33%
+    margin-top: 0.5rem
+    border-radius: 100px
+   

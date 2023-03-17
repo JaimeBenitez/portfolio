@@ -1,0 +1,22 @@
+@mixin neo( $estado ,$br , $dis1 ){
+	color			: #393939;
+	transition		: all .4s ease;
+	border-radius 	: $br ;
+	
+	@if $estado == 1 {
+		background-color	: #ececec;
+		box-shadow			: 
+			$dis1    $dis1    $dis1*2 #c9c9c9,
+			$dis1*-1 $dis1*-1 $dis1*2 #ffffff,
+			inset 0 0 0 transparent,
+			inset 0 0 0 transparent;
+	}@else if $estado == 2 {
+		background-color	: #ececec;
+		box-shadow			: 
+			0 0 0 transparent,
+			0 0 0 transparent,
+			inset $dis1    $dis1    $dis1*2 #c9c9c9,
+			inset $dis1*-1 $dis1*-1 $dis1*2 #ffffff;
+	}
+    
+}
