@@ -44,7 +44,11 @@ export default function Technologies() {
                         <li className="tech">
                             <img className="icon" src={require("../assets/img/spring.svg").default} alt="springboot"/>
                             <p className="tech__description">Springboot</p>
-                        </li>                       
+                        </li>
+                        <li className="tech">
+                            <img className="icon" src={require("../assets/img/nodejs.svg").default} alt="node"/>
+                            <p className="tech__description">NodeJS</p>
+                        </li>                        
                     </ul>
                 </div>
                 <div className="technologies__item">

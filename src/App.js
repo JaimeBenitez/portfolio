@@ -3,6 +3,7 @@ import Home from './components/home'
 import About from './components/about'
 import Technologies from './components/technologies'
 import Projects from './components/projects'
+import Contact from './components/contact'
 import "./assets/sass/App.sass";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <About />
       <Technologies />
       <Projects />
+      <Contact />
     </main>
   );
 }

@@ -1,0 +1,138 @@
+.contact    
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-content: space-between
+    flex-wrap: nowrap
+    margin-top: 80px
+    height: 100vh
+
+.contact__sections
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    align-content: space-between
+    flex-wrap: nowrap
+
+
+
+.contact__title
+    font-family: $title-font
+    font-size: $title-size    
+    font-weight: 800
+    padding: 1rem
+    align-self: center
+
+
+.contact__subtitle
+    font-family: $title-font
+    font-size: $subtitle-size
+    font-weight: 800
+    padding: 1rem
+ 
+    
+.contact__form
+    margin-bottom: 10px
+    width: 50%
+    display: flex
+    flex-direction: column
+    align-items: center
+
+
+.contact__form label 
+    display: block
+    font-size: $subtitle-size
+    color: $secondary-color
+    font-family: $title-font
+    text-align: center
+
+
+
+.contact__form input 
+    display: block
+    min-width: 250px
+    line-height: 1.5
+    font-size: $text-size
+    margin: 1rem
+    border: 1px solid $third-color
+    background-color: $secondary-color
+    color: $primary-color
+    border-radius: 100px
+    font-family: $text-font
+    text-indent: 5%
+
+
+.contact__form textarea
+    font-size: $text-size
+    margin: 1rem
+    min-width: 250px
+    min-height: 100px
+    border: 1px solid $third-color
+    background-color: $secondary-color
+    color: $primary-color
+    border-radius: 20px
+    font-family: $text-font
+    text-indent: 5%
+
+
+
+
+input[type="submit"] 
+    display: block  
+    font-size: $subtitle-size
+    background-color: $third-color
+    color: $primary-color
+    border: none
+  
+
+.contact__links
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-content: center
+    flex-wrap: wrap
+    width: 50%
+    text-align: center
+    @media (max-width: 1000px)
+        width: 100%
+
+.links
+    margin: 20px auto
+    display: grid 
+    width: 600px
+    height: 200px
+    grid-template-columns: 200px 200px 200px
+    grid-row: auto auto
+    grid-column-gap: 20px
+    grid-row-gap: 20px   
+
+.link  
+    list-style: none
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+
+.link__icon
+    transform: scale(3)
+    padding: 1rem
+    cursor: pointer
+    filter: gray
+    filter: grayscale(1) 
+
+.link__icon:hover
+    filter: none
+    transform: scale(3.2)
+
+.link__description    
+    font-family: $text-font
+    font-size: $text-size
+    
+
+.error
+    font-size: $text-size
+    font-family: $text-font
+    color: red
+    
+    
