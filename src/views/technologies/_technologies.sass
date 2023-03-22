@@ -1,3 +1,4 @@
+@import '../../assets/sass/App.sass'
 .technologies    
     display: flex
     flex-direction: column
@@ -14,14 +15,6 @@
     align-content: space-between
     flex-wrap: nowrap
     
-    
-.technologies__title    
-    font-family: $title-font
-    font-size: $title-size
-    font-weight: 800
-    padding: 1rem
-    align-self: center
-
 .technologies__item
     display: flex
     flex-direction: column
@@ -48,40 +41,3 @@
     grid-column-gap: 20px
     grid-row-gap: 20px 
 
-
-
-.tech   
-    list-style: none
-    display: flex
-    justify-content: center
-    align-items: center
-    flex-direction: column
-
-.icon
-    transform: scale(3)
-    padding: 1rem
-    cursor: pointer
-    filter: gray
-    filter: grayscale(1) 
-
-.icon:hover
-    filter: none
-    transform: scale(3.2)
-
-.git
-    transform: scale(3.2)    
-
-.git:hover    
-    transform: scale(3.4)
-
-.spring
-    transform: scale(3.2)    
-
-.spring:hover    
-    transform: scale(3.4)
-
-
-.tech__description
-    
-    font-family: $text-font
-    font-size: $text-size

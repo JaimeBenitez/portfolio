@@ -1,9 +1,10 @@
 import React from "react";
+import './_home.sass'
 
-export default function Home(){
+const Home = () => {
     return(
         <section className="home" id="home">             
-            <img className="image-cv" src={require('../assets/img/Foto-cv.png')} alt="mi foto" />
+            <img className="image-cv" src={require('../../assets/img/Foto-cv.png')} alt="mi foto" />
             <div className="text-container">  
                 <p>¡Buenas!</p>
                 <p><strong>Soy Jaime Benitez</strong></p>
@@ -12,3 +13,5 @@ export default function Home(){
         </section>
     )
 }
+
+export default Home

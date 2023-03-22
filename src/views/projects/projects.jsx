@@ -1,6 +1,8 @@
 import React, {useState} from "react";
+import './_projects.sass'
+import Title from '../../components/title/title.jsx'
 
-export default function Projects(){
+const Projects = () =>{
 
     const [isDigimonActive, setDigimonActive] = useState(false);
     const [isIdleActive, setIdleActive] = useState(false);
@@ -15,11 +17,11 @@ export default function Projects(){
 
     return(
         <section className="projects" id="projects">
-            <span className="projects__title">Proyectos</span>
+            <Title>Proyectos</Title>
             <div className="projects__container">
                 <div className="cards">
                     <div className="card">                        
-                        <img className="card-img" src={require('../assets/img/digimon-information.png')} onMouseOver={handleDigimonHover}   alt= "digimon-information" />                        
+                        <img className="card-img" src={require('../../assets/img/digimon-information.png')} onMouseOver={handleDigimonHover}   alt= "digimon-information" />                        
                         <div className={isDigimonActive ? "hover-container show" : "hover-container"} >
                             <span className="card-title">Digimon-information</span>
                             <p className="card-description">Aplicación que nos permite usar la ApiRest de digimon-information para buscar digimons y guardar favoritos</p>
@@ -27,7 +29,7 @@ export default function Projects(){
                         </div>
                     </div>
                     <div className="card">                        
-                        <img className="card-img" src={require('../assets/img/idle_dev.png')} onMouseOver={handleIdleHover}  alt= "digimon-information" />                        
+                        <img className="card-img" src={require('../../assets/img/idle_dev.png')} onMouseOver={handleIdleHover}  alt= "digimon-information" />                        
                         <div className={isIdleActive ? "hover-container show" : "hover-container"} >
                             <span className="card-title">Idle-dev</span>
                             <p className="card-description">Bienvenid@ al mundo tecnológico. Gana dinero comprando tecnologías y expande tu imperio tecnológico en este idle incremental</p>
@@ -41,3 +43,5 @@ export default function Projects(){
         
     )
 }
+
+export default Projects

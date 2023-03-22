@@ -1,10 +1,11 @@
-import Navbar from './components/navbar'
-import Home from './components/home'
-import About from './components/about'
-import Technologies from './components/technologies'
-import Projects from './components/projects'
-import Contact from './components/contact'
 import "./assets/sass/App.sass";
+import Navbar from './views/navbar/navbar'
+import Home from './views/home/home'
+import About from './views/about/about'
+import Technologies from './views/technologies/technologies'
+import Projects from './views/projects/projects'
+import Contact from './views/contact/contact'
+
 
 function App() {
   return (

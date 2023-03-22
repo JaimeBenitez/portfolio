@@ -1,7 +1,11 @@
 import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
+import Title from '../../components/title/title.jsx'
+import Subtitle from '../../components/subtitle/subtitle.jsx'
+import LinkItem from '../../components/linkItem/linkItem.jsx'
+import './_contact.sass'
 
-export default function Contact(){
+const Contact = () =>{
   const form = useRef();
   //Comprueba que el email es valido
   const emailRegexp = new RegExp(/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/)
@@ -73,10 +77,10 @@ export default function Contact(){
 
   return (
     <section className="contact" id="contact">
-        <span className="contact__title">Contacto</span>
+        <Title>Contacto</Title>
         <div className="contact__sections">
             <form ref={form} onSubmit={handleSubmit} className="contact__form">
-                <span className="about__subtitle">Mandame un mensaje...</span>
+                <Subtitle>Mandame un mensaje...</Subtitle>
                 <label htmlFor="user_name">Nombre</label>
                 <input type="text" value={username} onChange={handleUserChange} onBlur={handleUserError} name="user_name" 
                   aria-errormessage="usernameError"  aria-invalid={usernameError} />
@@ -99,24 +103,16 @@ export default function Contact(){
                     Error al enviar el mensaje</span>
             </form>
             <div className="contact__links">
-                <span className="contact__subtitle">... o puedes encontrarme en estas plataformas</span>
-                <ul className="links">
-                    <li className="link">
-                        <a href="mailto:jbenaci50@gmail.com?Subject=Me%20interesa%20tu%20CV"><img className="link__icon" src={require("../assets/img/email.svg").default} alt="email"/></a>
-                        <p className="link__description">Email</p>
-                    </li>
-                    <li className="link">
-                        <a href="https://www.linkedin.com/in/jaime-benitez-acien/" target="_blank" rel="noreferrer"><img className="link__icon" src={require("../assets/img/linkedin.svg").default} alt="linkedin"/></a>
-                        <p className="link__description">Linkedin</p>
-                    </li>
-                    <li className="link">
-                        <a href="https://github.com/JaimeBenitez" target="_blank" rel="noreferrer"><img className="link__icon" src={require("../assets/img/github.svg").default} alt="github"/></a>
-                        <p className="link__description">Github</p>
-                    </li>                    
+                <Subtitle>... o puedes encontrarme en estas plataformas</Subtitle>
+                <ul className="links">                    
+                    <LinkItem href="mailto:jbenaci50@gmail.com?Subject=Me%20interesa%20tu%20CV" source={require("../../assets/img/email.svg").default} alt="email" description="Email" />
+                    <LinkItem href="https://www.linkedin.com/in/jaime-benitez-acien/" source={require("../../assets/img/linkedin.svg").default} alt="linkedin" description="Linkedin" />
+                    <LinkItem href="https://github.com/JaimeBenitez" source={require("../../assets/img/github.svg").default} alt="github" description="Github" />                                       
                 </ul>
             </div>
-
         </div>
     </section>
   );
 };
+
+export default Contact
