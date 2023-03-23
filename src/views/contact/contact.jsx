@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser'
 import Title from '../../components/title/title.jsx'
 import Subtitle from '../../components/subtitle/subtitle.jsx'
 import LinkItem from '../../components/linkItem/linkItem.jsx'
+import ErrorMsg from '../../components/errorMsg/errorMsg.jsx'
 import './_contact.sass'
 
 const Contact = () =>{
@@ -84,23 +85,18 @@ const Contact = () =>{
                 <label htmlFor="user_name">Nombre</label>
                 <input type="text" value={username} onChange={handleUserChange} onBlur={handleUserError} name="user_name" 
                   aria-errormessage="usernameError"  aria-invalid={usernameError} />
-                <span className="error" id="usernameError" aria-live="assertive" style={{visibility: usernameError ? "visible" : "hidden"}}>
-                    Por favor introduce un nombre</span>
+                <ErrorMsg id="usernameError" condition={usernameError} message="Por favor introduce un nombre" />                   
                 <label htmlFor="user_email">Email</label>
                 <input type="email" value={email} onChange={handleEmailChange} onBlur={handleEmailError} name="user_email" 
                   aria-errormessage="emailError"  aria-invalid={emailError} />
-                <span className="error" id="emailError" aria-live="assertive" style={{visibility: emailError ? "visible" : "hidden"}}>
-                    Por favor introduce un email valido</span>
+                <ErrorMsg id="emailError" condition={emailError} message="Por favor introduce un email valido" />               
                 <label htmlFor="message">Mensaje</label>
                 <textarea name="message" value={message} onChange={handleMessageChange} onBlur={handleMessageError} 
                   aria-errormessage="messageError"  aria-invalid={messageError} />
-                <span className="error" id="messageError" aria-live="assertive" style={{visibility: messageError ? "visible" : "hidden"}}>
-                    Por favor introduce al menos 3 palabras</span>
+                <ErrorMsg id="messageError" condition={messageError} message="Por favor introduce al menos 3 palabras" />               
                 <input type="submit" className="button" value="Enviar" />
-                <span className="error" id="messageSent" aria-live="assertive" style={{visibility: messageSent ? "visible" : "hidden"}}>
-                    Mensaje enviado</span>
-                <span className="error" id="sentError" aria-live="assertive" style={{visibility: sentError ? "visible" : "hidden"}}>
-                    Error al enviar el mensaje</span>
+                <ErrorMsg id="messageSent" condition={messageSent} message="Mensaje enviado" />
+                <ErrorMsg id="sentError" condition={sentError} message="Error al enviar el mensaje" />                
             </form>
             <div className="contact__links">
                 <Subtitle>... o puedes encontrarme en estas plataformas</Subtitle>

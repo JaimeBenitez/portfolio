@@ -1,4 +1,5 @@
 import React from 'react'
+import Navlink from '../../components/navlink/navlink'
 import './_navbar.sass'
 
 const Navbar = () =>{
@@ -8,11 +9,11 @@ const Navbar = () =>{
             <nav className='navbar'>
                 <div className='logo-container'><img className='logo' src={require("../../assets/img/logo.png")} alt="logo"/></div>
                 <ul className='navlinks'>
-                    <li className='nav__li'><a href='#home' className='navlink'>INICIO</a></li>
-                    <li className='nav__li'><a href='#about' className='navlink'>SOBRE MI</a></li>
-                    <li className='nav__li'><a href='#technologies' className='navlink'>TECNOLOGÍAS</a></li>
-                    <li className='nav__li'><a href='#projects' className='navlink'>PROYECTOS</a></li>
-                    <li className='nav__li'><a href='#contact' className='navlink'>CONTACTO</a></li>
+                    <Navlink href='#home'>INICIO</Navlink>
+                    <Navlink href='#about'>SOBRE MI</Navlink>
+                    <Navlink href='#technologies'>TECNOLOGÍAS</Navlink>
+                    <Navlink href='#projects'>PROYECTOS</Navlink>
+                    <Navlink href='#contact'>CONTACTO</Navlink>
                 </ul>                
             </nav>
         </header>

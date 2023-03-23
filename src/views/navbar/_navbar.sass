@@ -1,4 +1,5 @@
 @import '../../assets/sass/App.sass'
+
 .navbar
     display: flex 
     justify-content: space-between
@@ -21,36 +22,7 @@
     align-items: center
     
 
-.navlink
-    text-decoration: none
-    color: $primary-color
-    font-family: $title-font
-    font-size: $title-size
-    position: relative    
 
-.navlink:after
-    background: none repeat scroll 0 0 transparent
-    bottom: 0
-    content: ""
-    display: block
-    height: 2px
-    left: 50%
-    position: absolute
-    background: #fff
-    transition: width 0.3s ease 0s, left 0.3s ease 0s
-    width: 0
-
-.navlink:hover:after
-    width: 100%
-    left: 0
-    
-
-.nav__li
-    transition: all .5 ease
-
-.nav__li:hover
-    transform: scale(1.2)    
-    transition: all .5 ease
 
 
 
