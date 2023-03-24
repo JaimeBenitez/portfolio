@@ -1,7 +1,11 @@
 *
     box-sizing: border-box
+    scroll-behavior: smooth
+
+
 body
     background-color: $primary-color
+    overflow-x: hidden 
     
 .title
     font-family: $title-font
@@ -15,3 +19,22 @@ body
     font-size: $subtitle-size
     font-weight: 800
     padding: 1rem
+
+.hidden-left
+  opacity: 0
+  filter: blur(4px)
+  transform: translateX(-100%)
+  transition: all 1.5s
+
+.hidden-right
+  opacity: 0
+  filter: blur(4px)
+  transform: translateX(100%)
+  transition: all 1.5s
+
+
+.show
+  opacity: 1
+  filter: blur(0)
+  transform: translateY(0)
+  transition: all 1.5s
